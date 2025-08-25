@@ -134,6 +134,10 @@ const validateUser = (req, res, next) => {
 
 // Routes
 
+app.get('/', (req, res) => {
+    res.json({ message: 'InternRock backend service is running.' });
+});
+
 // Auth Routes
 app.post('/api/auth/register', validateUser, async (req, res) => {
     try {
